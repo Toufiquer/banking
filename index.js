@@ -20,14 +20,29 @@ function addNum(ID, newNum) {
 document.querySelector('#deposit-button').addEventListener('click', function () {
     let inputValue = inputToNum('#input-deposit')
     let resultDeposit = addNum('#deposit-value', inputValue)
-    printID('#deposit-value', resultDeposit)
     let resultBalance = addNum('#balance-value', inputValue)
-    printID('#balance-value', resultBalance)
+    if (isNaN(resultBalance)) {
+        alert('Please Input A Valid Number')
+    } else if (inputValue < 0) {
+        alert('Please Input A Positive Number')
+    } else {
+        printID('#deposit-value', resultDeposit)
+        printID('#balance-value', resultBalance)
+    }
 })
 document.querySelector('#withdraw-button').addEventListener('click', function () {
+    debugger
     let withdrawValue = inputToNum('#input-withdraw')
     let resultWithdraw = addNum('#withdraw-value', withdrawValue)
-    printID('#withdraw-value', resultWithdraw)
     let resultBalance = addNum('#balance-value', -withdrawValue)
-    printID('#balance-value', resultBalance)
+    if (isNaN(resultBalance)) {
+        alert('Please Input A Valid Number')
+    } else if (withdrawValue < 0) {
+        alert('Please Input A Positive Number')
+    } else if (resultBalance > 0) {
+        printID('#withdraw-value', resultWithdraw)
+        printID('#balance-value', resultBalance)
+    } else {
+        alert('Please Deposit First')
+    }
 })
