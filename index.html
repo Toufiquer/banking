@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Practice</title>
+</head>
+
+<body>
+    <header>
+        <div class="text-center text-6xl py-7 text-cyan-500 font-semibold">This is My new Banking!!!</div>
+    </header>
+    <main>
+        <section>
+            <div class="grid gap-2 grid-cols-3 w-3/4 mx-auto">
+                <div class="bg-lime-500 p-2 rounded">
+                    <div class="text-center text-2xl">Deposit</div>
+                    <div class="text-4xl text-center text-cyan-100 font-semibold">$ <span id="deposit-value">00</span>
+                    </div>
+                </div>
+                <div class="bg-indigo-500 p-2 rounded">
+                    <div class="text-center text-2xl">Withdraw</div>
+                    <div class="text-4xl text-center text-cyan-100 font-semibold">$ <span id="withdraw-value">00</span>
+                    </div>
+                </div>
+                <div class="bg-emerald-400 p-2 rounded">
+                    <div class="text-center text-2xl">Balance</div>
+                    <div class="text-4xl text-center text-cyan-100 font-semibold">$ <span id="balance-value">1200</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="grid gap-2 grid-cols-2 w-3/4 mx-auto my-10">
+                <div class="bg-lime-400 p-2 rounded">
+                    <div class="text-center text-2xl">Deposit</div>
+                    <input class="block w-3/4 mx-auto p-2" value="500" placeholder="$ Deposit Value" type="text"
+                        id="input-deposit">
+                    <button id="deposit-button"
+                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded my-3 float-right mr-4">Deposit</button>
+                </div>
+                <div class="bg-red-400 p-2 rounded">
+                    <div class="text-center text-2xl">Withdraw</div>
+                    <input class="block w-3/4 mx-auto p-2" value="500" placeholder="$ Withdraw Value" type="text"
+                        id="input-withdraw">
+                    <button id="withdraw-button"
+                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded my-3 float-right mr-4">Withdraw</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-slate-400 text-white text-3xl text-center py-5 font-semibold absolute bottom-0 w-full">All right
+        reserved
+        &copy; 2022</footer>
+    <script src="index.js"></script>
+</body>
+
+</html>
